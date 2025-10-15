@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Amir Abdallah — Personal Blog
 
-## Getting Started
+Personal blog and portfolio built with modern web tooling. It showcases blog posts (linked to public Notion pages), projects, and a resume-style About page with theme toggle and social links.
 
-First, run the development server:
+Live: https://amir-blog.netlify.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech Stack
+- Next.js 15 (App Router) + TypeScript
+- Tailwind CSS + shadcn/ui
+- Zod (data validation)
+- Zustand (state management)
+- Lucide Icons
+- PNPM (package manager)
+
+## Features
+- Blog index that links each post to a public Notion page
+- Projects page with responsive card grid and GitHub links
+- About Me page with avatar, resume download, experience, education, projects, languages, and activities
+- Header with centered navigation, social icons, and theme toggle; footer with contact links
+- Dark/light theme with next-themes
+
+## Project Structure
+```
+amir-blog/
+├─ .gitignore
+├─ .env.local
+├─ next.config.ts
+├─ package.json
+├─ pnpm-lock.yaml
+├─ postcss.config.mjs
+├─ tailwind.config.ts
+├─ tsconfig.json
+├─ components.json
+│
+├─ app/
+│  ├─ favicon.ico
+│  ├─ globals.css
+│  ├─ layout.tsx
+│  ├─ page.tsx                  # Home (Blog listing)
+│  ├─ about/
+│  │  └─ page.tsx
+│  └─ projects/
+│     └─ page.tsx
+│
+├─ components/
+│  ├─ layout/
+│  │  ├─ header.tsx
+│  │  ├─ footer.tsx
+│  │  └─ theme-provider.tsx
+│  ├─ shared/
+│  │  ├─ project-card.tsx
+│  │  ├─ theme-toggle.tsx
+│  │  ├─ resume-section.tsx
+│  │  └─ resume-entry.tsx
+│  ├─ resume/
+│  │  ├─ basic-info.tsx
+│  │  ├─ experience.tsx
+│  │  ├─ education.tsx
+│  │  ├─ projects.tsx
+│  │  ├─ languages.tsx
+│  │  └─ extracurricular.tsx
+│  └─ ui/
+│     ├─ button.tsx
+│     └─ card.tsx
+│
+├─ data/
+│  └─ index.tsx                 # Social links, projects, blogPosts data
+│
+├─ lib/
+│  ├─ schemas.ts                # Zod schemas
+│  ├─ types.ts                  # TypeScript types inferred from schemas
+│  └─ utils.ts                  # Utils (e.g., className helpers)
+│
+├─ public/
+│  ├─ avatar.png                # Profile picture used in About page
+│  └─ Amir_Abdallah_Resume.pdf  # Downloadable resume
+│
+└─ node_modules/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Getting Started
+Requirements: Node.js 18+ and PNPM installed.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Install dependencies:
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run the dev server:
+```bash
+pnpm dev
+```
+Open http://localhost:3000.
 
-## Learn More
+Build for production:
+```bash
+pnpm build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Start the production server:
+```bash
+pnpm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Configuration & Content
+- No environment variables are required for the current setup.
+- Edit data at data/index.tsx:
+  - socialLinks: LinkedIn, X (Twitter), GitHub, Email
+  - projects: title, description, keywords, githubUrl
+  - blogPosts: title, description (max ~2 lines), keywords, notionUrl
+- Replace public/avatar.png and public/Amir_Abdallah_Resume.pdf with your assets.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
+### Netlify (recommended for this project)
+1) Push the repo to GitHub/GitLab/Bitbucket.
+2) In Netlify, “Add new site” → “Import an existing project”.
+3) Select the repo. Build command: `pnpm build`. Node version: 18 or newer.
+4) Netlify auto-detects Next.js and configures the runtime. Deploy.
 
-## Deploy on Vercel
+Alternative: Vercel (first-class Next.js hosting). Import the repo and deploy with defaults.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
+Issues and pull requests are welcome. For significant changes, please open an issue first to discuss what you’d like to modify.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+MIT
