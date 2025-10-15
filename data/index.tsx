@@ -2,38 +2,26 @@ import {BlogPost , Project , SocialLinks } from "@/lib/types";
 
 // --- My Own Social Link --- 
 export const socialLinks: SocialLinks = {
-    linkedIn: "https://www.linkedin.com/in/amir-abdallah/",
-    twitter: "https://x.com/your-username",
+    linkedIn: "https://www.linkedin.com/in/abdallah-amir-0b93101b8/",
+    twitter: "https://x.com/mimro_abdallah",
     github: "https://github.com/AmirUpSkill",
-    email: "mailto:your.email@example.com",
+    email: "mailto:amirabdallahpfe@gmail.com", 
 };
 // --- Some Dammy Data For Now (Later we will change it ) --- 
 export const projects: Project[] = [
     {
-        title: "E-commerce Platform",
-        description: "A full-stack e-commerce site built with Next.js, Stripe for payments, and a PostgreSQL database.",
-        keywords: ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Prisma"],
-        githubUrl: "https://github.com/AmirUpSkill/some-repo-1"
-    },
-    {
-        title: "Task Management App",
-        description: "A drag-and-drop task board inspired by Trello, using React and Zustand for state management.",
-        keywords: ["React", "Zustand", "TailwindCSS", "Vite"],
-        githubUrl: "https://github.com/AmirUpSkill/some-repo-2"
+        title: "Network AI",
+        description: "Network AI is a microservice-based application that combines intelligent LinkedIn search capabilities with resume analysis tools. It helps users find relevant profiles, companies, and jobs while providing personalized resume optimization recommendations.",
+        keywords: ["Next.js 15", "FastAPI", "Exa AI", "Google Gemini", "Supabase", "Microservices"],
+        githubUrl: "https://github.com/AmirUpSkill/Network-AI"
     },
 ];
 
 export const blogPosts: BlogPost[] = [
     {
-        title: "Mastering Zustand for State Management in React",
-        description: "A deep dive into why Zustand is a lightweight and powerful alternative to Redux for your React applications.",
-        keywords: ["React", "State Management", "Zustand", "TypeScript"],
-        notionUrl: "https://your-username.notion.site/your-page-id-1"
-    },
-    {
-        title: "Building Type-Safe APIs with Next.js and Zod",
-        description: "Learn how to leverage Zod to validate API requests and responses in your Next.js app, ensuring data integrity.",
-        keywords: ["Next.js", "API", "Zod", "TypeScript"],
-        notionUrl: "https://your-username.notion.site/your-page-id-2"
+        title: "System Design 101: Architecting a ChatGPT-like Conversational AI",
+        description: "A comprehensive guide to designing the runtime infrastructure for a large-scale conversational AI, covering core components, scalability for 10 million users, and real-time response streaming.",
+        keywords: ["System Design", "ChatGPT", "AI Architecture", "Scalability", "Streaming"],
+        notionUrl: "https://www.notion.so/Design-Chat-GPT-System-Design-101-28de2e5b4d8e8056a6f6cba56acafb45?source=copy_link"
     },
 ];
