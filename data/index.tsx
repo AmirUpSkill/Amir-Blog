@@ -11,7 +11,7 @@ export const socialLinks: SocialLinks = {
 export const projects: Project[] = [
     {
         title: "Network AI",
-        description: "Network AI is a microservice-based application that combines intelligent LinkedIn search capabilities with resume analysis tools. It helps users find relevant profiles, companies, and jobs while providing personalized resume optimization recommendations.",
+        description: "A microservice app that combines LinkedIn search with resume analysis for smarter job hunting.",
         keywords: ["Next.js 15", "FastAPI", "Exa AI", "Google Gemini", "Supabase", "Microservices"],
         githubUrl: "https://github.com/AmirUpSkill/Network-AI"
     },

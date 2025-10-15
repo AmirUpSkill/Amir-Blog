@@ -18,13 +18,13 @@ export default function HomePage() {
                 </Link>
               </h2>
               <p className="mt-2 text-muted-foreground">{post.description}</p>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {post.keywords.map((keyword, i) => (
-                  <span key={i} className="rounded-md bg-secondary px-2 py-1 text-xs">
-                    {keyword}
-                  </span>
-                ))}
-              </div>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {post.keywords.map((keyword: string, i: number) => (
+                      <span key={i} className="rounded-md bg-secondary px-2 py-1 text-xs">
+                        {keyword}
+                      </span>
+                    ))}
+                  </div>
             </div>
           ))}
         </div>

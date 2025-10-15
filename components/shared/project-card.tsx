@@ -19,7 +19,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </CardHeader>
       <CardContent className="flex-1">
         <div className="flex flex-wrap gap-2 mt-2">
-          {project.keywords.map((keyword, i) => (
+          {project.keywords.map((keyword: string, i: number) => (
             <span key={i} className="rounded-md bg-secondary px-2 py-1 text-xs">
               {keyword}
             </span>
